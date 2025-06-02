@@ -12,15 +12,15 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Services</h1>
           <p className="text-xl text-gray-300 max-w-2xl">
-            Experience premium transportation solutions tailored to your needs. From airport transfers to special events, we've got you covered.
+            Experience premium transportation solutions tailored to your needs. From airport transfers to special events, we have got you covered.
           </p>
         </div>
       </section>
 
       {/* Services Section */}
-      <Services showAll={true} />
+      <Services />
 
-      {/* Additional Services */}
+
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
