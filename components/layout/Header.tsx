@@ -169,7 +169,7 @@ export function Header() {
                   className="flex items-center space-x-2 text-gray-700"
                 >
                   <PhoneCall size={18} />
-                  <span>+1 (234) 567-890</span>
+                 <span>+91 (827) 931-7136</span>
                 </a>
               </div>
               <Button className="bg-amber-600 hover:bg-amber-700 text-white w-full">

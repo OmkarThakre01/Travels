@@ -32,14 +32,7 @@ export default function Home() {
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl">
               Professional drivers, comfortable vehicles, and competitive rates. Book your ride in minutes and enjoy a hassle-free experience.
             </p>
-            <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-amber-600 hover:bg-amber-700 text-white">
-                Download App
-              </Button>
-              <Button size="lg" variant="outline" className="text-black border-white hover:bg-white/10">
-                Learn More
-              </Button>
-            </div>
+          
           </div>
           <div className="w-full max-w-md lg:w-2/5 lg:max-w-none">
             <BookingWidget className="shadow-2xl" />
