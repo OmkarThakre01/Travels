@@ -103,7 +103,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
               <div className="space-y-2">
                 <label className="text-sm font-medium">Time</label>
                 <div className="relative">
-                  <Clock className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+                  <Clock className="absolute left-3 top-1/2 -translate-y-1/2 text-amber-600" size={18}  />
                   <Select>
                     <SelectTrigger className="pl-10 text-amber-600">
                       <SelectValue placeholder="Select time" />
@@ -125,7 +125,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
               <div className="space-y-2">
                 <label className="text-sm font-medium">Passengers</label>
                 <div className="relative">
-                  <Users className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500" size={18} />
+                  <Users className="absolute left-3 top-1/2 -translate-y-1/2 text-amber-600" size={18} />
                   <Select value={passengers} onValueChange={setPassengers}>
                     <SelectTrigger className="pl-10 text-amber-600">
                       <SelectValue placeholder="Passengers" />
