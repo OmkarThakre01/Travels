@@ -8,7 +8,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-4">RideEase</h3>
+            <h3 className="text-xl font-bold mb-4">Sonu Tours and Travels</h3>
             <p className="text-gray-300 max-w-xs">
               Premium taxi service providing reliable and comfortable transportation for all your needs.
             </p>
@@ -56,15 +56,16 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
                 <MapPin size={20} className="shrink-0 mt-1 text-gray-400" />
-                <span className="text-gray-300">123 Booking Street, City, State 12345</span>
+                <span className="text-gray-300">Derhdun</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone size={20} className="shrink-0 text-gray-400" />
-                <span className="text-gray-300">+1 (234) 567-890</span>
+                <span className="text-gray-300">+91 (827) 931-7136</span>
+
               </li>
               <li className="flex items-center space-x-3">
                 <Mail size={20} className="shrink-0 text-gray-400" />
-                <span className="text-gray-300">info@rideease.com</span>
+                <span className="text-gray-300">Sonu@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -55,7 +55,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 <Input 
                   id="pickup" 
                   placeholder="Enter pickup address" 
-                  className="pl-10"
+                  className="pl-10  text-gray-800"
                 />
               </div>
             </div>
@@ -70,7 +70,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 <Input 
                   id="dropoff" 
                   placeholder="Enter destination address" 
-                  className="pl-10"
+                  className="pl-10  text-gray-800"
                 />
               </div>
             </div>
@@ -156,11 +156,15 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 </Select>
               </div>
             </div>
-            
+                <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdBz8-lstUU-Kp8FYzdh3bLPmiv8gFrTwlIezEBABBpc2AAIg/viewform"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
             <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-2">
               <Search className="mr-2 h-4 w-4" />
               Get Quote
-            </Button>
+            </Button></a>
           </TabsContent>
           
           <TabsContent value="roundTrip" className="space-y-4">
@@ -178,7 +182,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 <Input 
                   id="pickup-round" 
                   placeholder="Enter pickup address" 
-                  className="pl-10"
+                  className="pl-10  text-gray-800"
                 />
               </div>
             </div>
@@ -193,7 +197,7 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 <Input 
                   id="dropoff-round" 
                   placeholder="Enter destination address" 
-                  className="pl-10"
+                  className="pl-10  text-gray-800"
                 />
               </div>
             </div>
@@ -242,11 +246,15 @@ export function BookingWidget({ className, standalone = false }: BookingWidgetPr
                 </Popover>
               </div>
             </div>
-            
+                <a
+      href="https://docs.google.com/forms/d/e/1FAIpQLSdBz8-lstUU-Kp8FYzdh3bLPmiv8gFrTwlIezEBABBpc2AAIg/viewform" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
             <Button className="w-full bg-amber-600 hover:bg-amber-700 text-white mt-2">
               <Search className="mr-2 h-4 w-4" />
               Get Quote
-            </Button>
+            </Button></a>
           </TabsContent>
         </Tabs>
       </div>
