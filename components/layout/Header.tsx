@@ -28,14 +28,14 @@ export function Header() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white shadow-md py-2 text-gray-900"
-          : "bg-transparent py-4 text-white"
+          ? "bg-gradient-to-r from-black to-slate-800  shadow-md py-6 text-white"
+          : "py-4 text-white"
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl font-bold">Sonu Tours and Travels</span>
+            <span className="text-2xl font-bold">Omkar</span>
           </Link>
 
           {/* Desktop navigation */}
@@ -45,61 +45,40 @@ export function Header() {
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
                 isScrolled
-                  ? "text-gray-700 hover:text-primary"
+                  ? "text-white hover:text-primary"
                   : "text-white hover:text-white/80"
               )}
             >
-              Home
+              Work
             </Link>
             <Link
               href="/services"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
                 isScrolled
-                  ? "text-gray-700 hover:text-primary"
-                  : "text-white hover:text-white/80"
-              )}
-            >
-              Services
-            </Link>
-            <Link
-              href="/rates"
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled
-                  ? "text-gray-700 hover:text-primary"
-                  : "text-white hover:text-white/80"
-              )}
-            >
-              Rates
-            </Link>
-            <Link
-              href="/about"
-              className={cn(
-                "text-sm font-medium transition-colors hover:text-primary",
-                isScrolled
-                  ? "text-gray-700 hover:text-primary"
+                  ? "text-white hover:text-primary"
                   : "text-white hover:text-white/80"
               )}
             >
               About
             </Link>
             <Link
-              href="/contact"
+              href="/rates"
               className={cn(
                 "text-sm font-medium transition-colors hover:text-primary",
                 isScrolled
-                  ? "text-gray-700 hover:text-primary"
+                  ? "text-white hover:text-primary"
                   : "text-white hover:text-white/80"
               )}
             >
               Contact
             </Link>
+           
           </nav>
 
           {/* Phone and login button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a
+       {/* <div className="hidden md:flex items-center space-x-4">
+            {/* <a
               href="tel:+8279317136"
               className={cn(
                 "flex items-center space-x-2 text-sm font-medium",
@@ -108,16 +87,16 @@ export function Header() {
             >
               <PhoneCall size={18} />
               <span>+91 (827) 931-7136</span>
-            </a>
-            <Button
+            </a> */}
+            {/* <Button
               className={cn(
                 "bg-amber-600 hover:bg-amber-700 text-white",
                 !isScrolled && "border border-white"
               )}
             >
-              Book Now
-            </Button>
-          </div>
+             Contact
+            </Button>  */}
+          {/* </div> */} 
 
           {/* Mobile menu button */}
           <button

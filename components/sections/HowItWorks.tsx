@@ -1,69 +1,86 @@
-import { ArrowRight, MapPin, Calendar, Car, CreditCard } from 'lucide-react';
+"use client";
+
+import { ArrowRight } from "lucide-react";
+// import { FaBookReader, FaAccessibleIcon } from "react-icons/fa";
+import Image from "next/image";
+
+import { FaLaptopCode, FaMobileAlt } from "react-icons/fa";
+import MobileUi from '@/assets/Casestudyimages/MobileUi.png';
+import Webui from '@/assets/Casestudyimages/Webui.png';
+const projects = [
+  {
+    title: "Website UI",
+    description:
+      "A modern and responsive website UI design focused on clean layout, accessibility, and optimal user experience across devices.",
+    button: "View my work",
+    icon: <FaLaptopCode className="text-white text-2xl" />,
+    image: Webui, // Replace with your mockup image
+    bgColor: "bg-red-500",
+    imageBg: "bg-red-100",
+  },
+  {
+    title: "Mobile UI",
+    description:
+      "A user-friendly mobile app UI crafted for seamless navigation, intuitive interactions, and engaging visual design.",
+    button: "View my work",
+    icon: <FaMobileAlt className="text-white text-2xl" />,
+    image: MobileUi, // Replace with your mockup image
+    bgColor: "bg-blue-600",
+    imageBg: "bg-yellow-100",
+  },
+];
+;
 
 export function HowItWorks() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Booking your ride with RideEase is simple and straightforward. Just follow these steps for a seamless experience.
+        <div className="mb-12">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Featured projects
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto md:mx-0">
+            Find out about my works: read through my case studies, have a look
+            at final designs and try out prototypes I’ve built.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Step 1 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 text-white">
-              <MapPin size={28} />
+
+        <div className="grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <div
+              key={project.title}
+              className="rounded-2xl border border-gray-200 overflow-hidden flex flex-col"
+            >
+              <div className="p-6 flex flex-col gap-3">
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`w-10 h-10 rounded-full flex items-center justify-center ${project.bgColor}`}
+                  >
+                    {project.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold">{project.title}</h3>
+                </div>
+                <p className="text-gray-600">{project.description}</p>
+                <a
+                  href="#"
+                  className="mt-2 inline-flex items-center gap-1 font-medium text-blue-600 hover:underline"
+                >
+                  {project.button}
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              <div className={`${project.imageBg} p-4 flex justify-center`}>
+                <Image
+                  src={project.image}
+                  alt={`${project.title} mockup`}
+                  width={300}
+                  height={200}
+                  className="rounded-lg object-contain"
+                />
+              </div>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Enter Location</h3>
-            <p className="text-gray-600">
-              Input your pickup and drop-off locations to get started with your booking.
-            </p>
-            <div className="mt-4 text-primary hidden md:block">
-              <ArrowRight className="ml-auto" />
-            </div>
-          </div>
-          
-          {/* Step 2 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 text-white">
-              <Calendar size={28} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Choose Date & Time</h3>
-            <p className="text-gray-600">
-              Select when you need the ride and how many passengers will be traveling.
-            </p>
-            <div className="mt-4 text-primary hidden md:block">
-              <ArrowRight className="ml-auto" />
-            </div>
-          </div>
-          
-          {/* Step 3 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 text-white">
-              <Car size={28} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Select Vehicle</h3>
-            <p className="text-gray-600">
-              Choose from our range of vehicles based on your needs and preferences.
-            </p>
-            <div className="mt-4 text-primary hidden md:block">
-              <ArrowRight className="ml-auto" />
-            </div>
-          </div>
-          
-          {/* Step 4 */}
-          <div className="flex flex-col items-center text-center">
-            <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 text-white">
-              <CreditCard size={28} />
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Confirm & Pay</h3>
-            <p className="text-gray-600">
-              Review your booking details, confirm, and complete payment securely.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
